@@ -21,7 +21,13 @@ namespace EurekaDemo.Controllers
         [HttpGet]
         public async Task<string> Get()
         {
-            return await _dadJokeService.GetJokeAsync();
+            string joke = string.Empty;
+            try
+            {
+                joke = await _dadJokeService.GetJokeAsync();
+            }
+            catch (Exception ex) { }
+            return joke;
         }
     }
 }

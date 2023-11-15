@@ -13,7 +13,7 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddHttpClient();
+builder.Services.AddHttpClient<JokeService>(static client => client.BaseAddress = new("http://dadjokeapi"));
 
 var app = builder.Build();
 

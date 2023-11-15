@@ -11,20 +11,17 @@ namespace EurekaDemo.Controllers
 
         //private readonly IList<Application> _apps;
         private readonly ILogger<JokeController> _logger;
-        private readonly HttpClient _httpClient;
+        private readonly JokeService _jokeService;
 
-        public JokeController(ILogger<JokeController> logger, HttpClient client)
+        public JokeController(ILogger<JokeController> logger, JokeService jokeService)
         {
             _logger = logger;
-            _httpClient = client;
-            _httpClient.BaseAddress = new("http://dadjokeapi");
-            //_httpClient.BaseAddress = new("https://localhost:5005");
 
         }
         [HttpGet]
         public async Task<string> Get()
         {
-            return await _httpClient.GetStringAsync("/dadjoke");
+            return await _jokeService.GetJoke();
         }
     }
 }
