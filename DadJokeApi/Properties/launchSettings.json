@@ -1,21 +1,15 @@
 {
+  "$schema": "http://json.schemastore.org/launchsettings.json",
   "profiles": {
-    "DadJokeApi": {
+    "http": {
       "commandName": "Project",
+      "dotnetRunMessages": true,
       "launchBrowser": true,
-      "launchUrl": "dadjoke",
-      "applicationUrl": "https://localhost:5005"
-    },
-    "Docker": {
-      "commandName": "Docker",
-      "launchBrowser": true,
-      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/dadjoke",
+      "launchUrl": "weatherforecast",
+      "applicationUrl": "http://localhost:5561",
       "environmentVariables": {
-        "ASPNETCORE_URLS": "https://+:443;http://+:80"
-      },
-      "publishAllPorts": true,
-      "useSSL": true
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
     }
-  },
-  "$schema": "http://json.schemastore.org/launchsettings.json"
+  }
 }
