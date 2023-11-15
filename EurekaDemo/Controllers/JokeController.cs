@@ -16,6 +16,7 @@ namespace EurekaDemo.Controllers
         public JokeController(ILogger<JokeController> logger, JokeService jokeService)
         {
             _logger = logger;
+            _jokeService = jokeService;
 
         }
         [HttpGet]

@@ -9,4 +9,6 @@ var dadjokeapi = builder.AddProject<Projects.DadJokeApi>("dadjokeapi");
 builder.AddProject<Projects.EurekaDemo>("eurekademo")
     .WithReference(dadjokeapi);
 
-builder.Build().Run();
+var app = builder.Build();
+
+app.Run();
