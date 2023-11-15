@@ -1,0 +1,21 @@
+{
+  "profiles": {
+    "DadJokeApi": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "dadjoke",
+      "applicationUrl": "https://localhost:5005"
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchBrowser": true,
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/dadjoke",
+      "environmentVariables": {
+        "ASPNETCORE_URLS": "https://+:443;http://+:80"
+      },
+      "publishAllPorts": true,
+      "useSSL": true
+    }
+  },
+  "$schema": "http://json.schemastore.org/launchsettings.json"
+}
